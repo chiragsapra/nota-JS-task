@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Table Example</title>
+</head>
+<body>
+    <h1>Data Table</h1>
+    <button id="addNewEntry">Add New Entry</button>
+    <div id="newEntryForm" style="display: none;">
+        <input type="text" id="nameInput" placeholder="Name">
+        <button id="sendButton">Send</button>
+    </div>
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Datetime</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Table rows will be dynamically added here -->
+        </tbody>
+    </table>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

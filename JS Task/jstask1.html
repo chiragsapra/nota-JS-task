@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button Swap</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.button').click(function () {
+                var $this = $(this);
+                var $neighbors = $this.siblings();
+                var currentIndex = $neighbors.index($this);
+
+                if (currentIndex === 0) {
+                    // If it's the first button, swap with the one below it.
+                    var $next = $this.next();
+                    $this.insertAfter($next);
+                } else {
+                    // Swap with the one above it.
+                    var $prev = $this.prev();
+                    $this.insertBefore($prev);
+                }
+            });
+        });
+
+    </script>
+    <style>
+        /* styling for the buttons*/
+        .button{
+            background-color: #EA4C89;
+            border-radius: 8px;
+            width: 50px;
+            border-style: none;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            height: 40px;
+            line-height: 20px;
+            list-style: none;
+            margin: 0;
+            outline: none;
+            padding: 10px 16px;
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+            transition: color 100ms;
+            vertical-align: baseline;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+
+        .button-1:hover,
+        .button-1:focus {
+            background-color: #F082AC;
+        }
+    </style>
+</head>
+<body>
+    <div class="button" id="1">1</div>
+    <div class="button" id="2">2</div>
+    <div class="button" id="3">3</div>
+    <div class="button" id="4">4</div>
+    <div class="button" id="5">5</div> <!-- Can add as many button as required the code will work without any problem-->
+</body>
+</html>
